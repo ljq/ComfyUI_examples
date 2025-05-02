@@ -1,9 +1,9 @@
-# Hypernetwork Examples
+# 超网络示例
 
-You can Load these images in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
+您可以在[ComfyUI](https://github.com/comfyanonymous/ComfyUI)中加载这些图像以获取完整的工作流程。
 
-Hypernetworks are patches applied on the main MODEL so to use them put them in the models/hypernetworks directory and use the Hypernetwork Loader node like this:
+超网络是应用于主MODEL的补丁，要使用它们，请将它们放入models/hypernetworks目录，并使用Hypernetwork Loader节点如下：
 
-![Example](hypernetwork_example.png)
+![示例](hypernetwork_example.png)
 
-You can apply multiple hypernetworks by chaining multiple Hypernetwork Loader nodes in sequence.
+您可以通过串联多个Hypernetwork Loader节点来应用多个超网络。

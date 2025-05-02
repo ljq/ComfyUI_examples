@@ -1,11 +1,11 @@
-# Image Edit Model Examples
+# 图像编辑模型示例
 
-Edit models also called InstructPix2Pix models are models that can be used to edit images using a text prompt.
+编辑模型(也称为InstructPix2Pix模型)是可以通过文本提示来编辑图像的模型。
 
-Here is the workflow for the stability SDXL edit model, the checkpoint can be downloaded from: [here](https://huggingface.co/stabilityai/cosxl). To use it download the cosxl_edit.safetensors file and put it in the ComfyUI/models/checkpoints folder.
+以下是stability SDXL编辑模型的工作流程，检查点可以从[这里](https://huggingface.co/stabilityai/cosxl)下载。使用时请下载cosxl_edit.safetensors文件并放入ComfyUI/models/checkpoints文件夹。
 
-![Example](sdxl_edit_model.png)
+![示例](sdxl_edit_model.png)
 
-You can download the above image and then drag or load them on ComfyUI to get the workflow embedded in the image.
+您可以下载上面的图片，然后将其拖入或加载到ComfyUI中以获取嵌入的工作流程。
 
-The input image used in the above example can be found [here](../unclip/mountains.png).
+上述示例中使用的输入图像可以在[这里](../unclip/mountains.png)找到。

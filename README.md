@@ -1,14 +1,14 @@
-# [ComfyUI](https://github.com/comfyanonymous/ComfyUI) Examples
+# [ComfyUI](https://github.com/comfyanonymous/ComfyUI) 示例
 
-This [repo](https://github.com/comfyanonymous/ComfyUI_examples) contains examples of what is achievable with [ComfyUI](https://github.com/comfyanonymous/ComfyUI). All the images in this repo contain metadata which means they can be loaded into ComfyUI with the Load button (or dragged onto the window) to get the full workflow that was used to create the image.
+这个[仓库](https://github.com/comfyanonymous/ComfyUI_examples)包含了使用[ComfyUI](https://github.com/comfyanonymous/ComfyUI)可以实现的各种示例。仓库中的所有图片都包含元数据，这意味着可以通过ComfyUI中的加载按钮(或将图片拖入窗口)来获取创建该图片的完整工作流程。
 
-A good place to start if you have no idea how any of this works is the:
+如果您不知道这些是如何工作的，可以从这里开始:
 
-[ComfyUI Basic Tutorial VN](https://comfyanonymous.github.io/ComfyUI_tutorial_vn/): All the art is made with ComfyUI. (early and not finished)
+[ComfyUI基础教程VN](https://comfyanonymous.github.io/ComfyUI_tutorial_vn/): 所有艺术作品都是用ComfyUI制作的。(早期版本，尚未完成)
 
-Here are some more advanced examples:
+以下是一些更高级的示例:
 
-["Hires Fix" aka 2 Pass Txt2Img](2_pass_txt2img)
+["Hires Fix" 又名2 Pass Txt2Img](2_pass_txt2img)
 
 [Img2Img](img2img)
 
@@ -20,13 +20,13 @@ Here are some more advanced examples:
 
 [Embeddings/Textual Inversion](textual_inversion_embeddings)
 
-[Upscale Models (ESRGAN, etc..)](upscale_models)
+[Upscale Models (ESRGAN等)](upscale_models)
 
 [Area Composition](area_composition)
 
 [Noisy Latent Composition](noisy_latent_composition)
 
-[ControlNets and T2I-Adapter](controlnet)
+[ControlNets和T2I-Adapter](controlnet)
 
 [GLIGEN](gligen)
 

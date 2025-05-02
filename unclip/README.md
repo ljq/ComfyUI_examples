@@ -1,33 +1,33 @@
-# unCLIP Model Examples
+# unCLIP模型示例
 
-unCLIP models are versions of SD models that are specially tuned to receive image concepts as input in addition to your text prompt. Images are encoded using the CLIPVision these models come with and then the concepts extracted by it are passed to the main model when sampling.
+unCLIP模型是SD模型的特殊版本，除了文本提示外，还可以接收图像概念作为输入。图像通过这些模型自带的CLIPVision进行编码，然后在采样时将提取的概念传递给主模型。
 
-It basically lets you use images in your prompt.
+基本上，它让你可以在提示中使用图像。
 
-Here is how you use it in ComfyUI (you can drag this into [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow):
+以下是在ComfyUI中的使用方法（你可以将此图拖入[ComfyUI](https://github.com/comfyanonymous/ComfyUI)来获取工作流）：
 
-![Example](unclip_example.png)
+![示例](unclip_example.png)
 
-noise_augmentation controls how closely the model will try to follow the image concept. The lower the value the more it will follow the concept.
+noise_augmentation控制模型将如何紧密地遵循图像概念。值越低，越会遵循概念。
 
-strength is how strongly it will influence the image.
+strength控制它对图像的影响程度。
 
-Multiple images can be used like this:
+可以像这样使用多个图像：
 
-![Example](unclip_example_multiple.png)
+![示例](unclip_example_multiple.png)
 
-You'll notice how it doesn't blend the images together in the traditional sense but actually picks some concepts from both and makes a coherent image.
+你会注意到它并不是以传统方式混合图像，而是从两者中提取一些概念并创建一个连贯的图像。
 
-Input images:
+输入图像：
 
 <img src="mountains.png" width="256" /><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="sunset.png" width="256" />
 
-You can find the official unCLIP checkpoints [here](https://huggingface.co/stabilityai/stable-diffusion-2-1-unclip/tree/main)
+你可以在[这里](https://huggingface.co/stabilityai/stable-diffusion-2-1-unclip/tree/main)找到官方的unCLIP检查点
 
-You can find some unCLIP checkpoints I made from some existing 768-v checkpoints with some clever merging [here (based on WD1.5 beta 2)](https://huggingface.co/comfyanonymous/wd-1.5-beta2_unCLIP/tree/main) and [here (based on illuminati Diffusion)](https://huggingface.co/comfyanonymous/illuminatiDiffusionV1_v11_unCLIP/tree/main)
+你可以在这里找到我通过一些巧妙的合并从一些现有的768-v检查点制作的unCLIP检查点：[这里（基于WD1.5 beta 2）](https://huggingface.co/comfyanonymous/wd-1.5-beta2_unCLIP/tree/main)和[这里（基于illuminati Diffusion）](https://huggingface.co/comfyanonymous/illuminatiDiffusionV1_v11_unCLIP/tree/main)
 
-### More advanced Workflows
+### 更高级的工作流
 
-A good way of using unCLIP checkpoints is to use them for the first pass of a 2 pass workflow and then switch to a 1.x model for the second pass. This is how the following image was generated. (you can load it into [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow):
+使用unCLIP检查点的一个好方法是在两步工作流的第一步中使用它们，然后在第二步中切换到1.x模型。以下图像就是这样生成的。（你可以将其加载到[ComfyUI](https://github.com/comfyanonymous/ComfyUI)中获取工作流）：
 
-![Example](unclip_2pass.png)
+![示例](unclip_2pass.png)

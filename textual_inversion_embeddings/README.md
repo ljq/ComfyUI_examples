@@ -1,28 +1,28 @@
-# Textual Inversion Embeddings Examples
+# 文本反转嵌入示例
 
-Here is an example for how to use Textual Inversion/Embeddings.
+这里展示了如何使用文本反转/嵌入（Textual Inversion/Embeddings）的示例。
 
-![Example](embedding_example.png)
+![示例](embedding_example.png)
 
-To use an embedding put the file in the models/embeddings folder then use it in your prompt like I used the SDA768.pt embedding in the previous picture.
+要使用嵌入，请将文件放在models/embeddings文件夹中，然后在提示中使用它，就像我在上图中使用SDA768.pt嵌入那样。
 
-Note that you can omit the filename extension so these two are equivalent:
+注意，你可以省略文件扩展名，所以以下两种写法是等效的：
 
 ```embedding:SDA768.pt```
 
 ```embedding:SDA768```
 
 
-You can also set the strength of the embedding just like regular words in the prompt:
+你也可以像调整提示中的普通词语一样设置嵌入的强度：
 
 ```(embedding:SDA768:1.2)```
 
 
-Embeddings are basically custom words so where you put them in the text prompt matters.
+嵌入本质上是自定义词语，所以它们在文本提示中的位置很重要。
 
-For example if you had an embedding of a cat:
+例如，如果你有一个猫的嵌入：
 
 ```red embedding:cat```
 
-This would likely give you a red cat.
+这很可能会给你一只红色的猫。
 

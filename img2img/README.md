@@ -1,13 +1,13 @@
-# Img2Img Examples
+# 图像到图像示例
 
-These are examples demonstrating how to do img2img.
+这些示例展示了如何进行图像到图像转换。
 
-You can Load these images in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
+您可以在[ComfyUI](https://github.com/comfyanonymous/ComfyUI)中加载这些图像以获取完整的工作流程。
 
-Img2Img works by loading an image like this [example image](https://github.com/comfyanonymous/ComfyUI/blob/master/input/example.png), converting it to latent space with the VAE and then sampling on it with a denoise lower than 1.0. The denoise controls the amount of noise added to the image. The lower the denoise the less noise will be added and the less the image will change.
+图像到图像的工作原理是加载一个图像，如这个[示例图像](https://github.com/comfyanonymous/ComfyUI/blob/master/input/example.png)，使用VAE将其转换为潜在空间，然后使用低于1.0的去噪值进行采样。去噪值控制添加到图像中的噪声量。去噪值越低，添加的噪声越少，图像变化越小。
 
-Input images should be put in the input folder.
+输入图像应放入input文件夹。
 
-This is what a simple img2img workflow looks like, it is the same as the default txt2img workflow but the denoise is set to 0.87 and a loaded image is passed to the sampler instead of an empty image.
+这是一个简单的图像到图像工作流程，它与默认的文本到图像工作流程相同，但去噪值设置为0.87，并且将加载的图像传递给采样器而不是空图像。
 
-![Example](img2img_workflow.png)
+![示例](img2img_workflow.png)

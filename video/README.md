@@ -1,31 +1,31 @@
-# Video Examples
+# 视频示例
 
-## Image to Video
+## 图像转视频
 
-As of writing this there are two image to video checkpoints. Here are the official checkpoints for [the one tuned to generate 14 frame videos](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/blob/main/svd.safetensors) and [the one for 25 frame videos](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/svd_xt.safetensors). Put them in the ComfyUI/models/checkpoints folder.
+截至撰写本文时，有两个图像转视频检查点。以下是官方检查点：[生成14帧视频的版本](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/blob/main/svd.safetensors)和[生成25帧视频的版本](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/svd_xt.safetensors)。将它们放入ComfyUI/models/checkpoints文件夹。
 
 
-The most basic way of using the image to video model is by giving it an init image like in the following workflow that uses the 14 frame model.
-You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
+使用图像转视频模型最基本的方法是给它一个初始图像，如下面使用14帧模型的工作流程所示。
+您可以下载此webp动画图像并将其加载或拖入[ComfyUI](https://github.com/comfyanonymous/ComfyUI)以获取工作流程。
 
-![Example](image_to_video.webp)
-[Workflow in Json format](workflow_image_to_video.json)
+![示例](image_to_video.webp)
+[Json格式的工作流程](workflow_image_to_video.json)
 
-If you want the exact input image you can find it on the [unCLIP example page](../unclip)
+如果需要确切的输入图像，可以在[unCLIP示例页面](../unclip)找到
 
-You can also use them like in this workflow that uses SDXL to generate an initial image that is then passed to the 25 frame model:
+您也可以像这个工作流程那样使用它们，该流程使用SDXL生成初始图像，然后传递给25帧模型：
 
-![Example](txt_to_image_to_video.webp)
-[Workflow in Json format](workflow_txt_to_img_to_video.json)
+![示例](txt_to_image_to_video.webp)
+[Json格式的工作流程](workflow_txt_to_img_to_video.json)
 
-#### Some explanations for the parameters:
+#### 参数说明：
 
-video_frames: The number of video frames to generate.
+video_frames: 要生成的视频帧数。
 
-motion_bucket_id: The higher the number the more motion will be in the video.
+motion_bucket_id: 数值越大，视频中的运动越多。
 
-fps: The higher the fps the less choppy the video will be.
+fps: fps越高，视频越流畅。
 
-augmentation level: The amount of noise added to the init image, the higher it is the less the video will look like the init image. Increase it for more motion.
+augmentation level: 添加到初始图像的噪声量，数值越高视频越不像初始图像。增加它以获得更多运动。
 
-VideoLinearCFGGuidance: This node improves sampling for these video models a bit, what it does is linearly scale the cfg across the different frames. In the above example the first frame will be cfg 1.0 (the min_cfg in the node) the middle frame 1.75 and the last frame 2.5. (the cfg set in the sampler). This way frames further away from the init frame get a gradually higher cfg.
+VideoLinearCFGGuidance: 此节点略微改善了这些视频模型的采样，它的作用是在不同帧之间线性缩放cfg。在上面的示例中，第一帧将是cfg 1.0(节点中的min_cfg)，中间帧1.75，最后一帧2.5(采样器中设置的cfg)。这样距离初始帧越远的帧会获得逐渐增加的cfg。

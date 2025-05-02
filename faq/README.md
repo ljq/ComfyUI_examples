@@ -1,29 +1,29 @@
-# Frequently Asked Questions
+# 常见问题解答
 
-## Why do I get different images from the a1111 UI even when I use the same seed?
+## 为什么即使使用相同的种子，我从a1111 UI得到的图像也不同？
 
-In ComfyUI the noise is generated on the CPU. Generating noise on the CPU gives ComfyUI the advantage that seeds will be much more reproducible across different hardware configurations but also means they will generate completely different noise than UIs like a1111 that generate the noise on the GPU. Generating noise on the GPU vs CPU does not affect performance in any way.
+在ComfyUI中，噪声是在CPU上生成的。在CPU上生成噪声使ComfyUI具有种子在不同硬件配置下更可重现的优势，但也意味着它们会生成与a1111等在GPU上生成噪声的UI完全不同的噪声。在GPU与CPU上生成噪声不会以任何方式影响性能。
 
-In ComfyUI the prompt strengths are also more sensitive because they are not normalized. A very short example is that when doing
+在ComfyUI中，提示强度也更敏感，因为它们没有被标准化。一个简短的例子是当使用
 
 ```(masterpiece:1.2) (best:1.3) (quality:1.4) girl```
 
-The a1111 ui is actually doing something like (but across all the tokens): 
+a1111 UI实际上做的是类似(但对所有token):
 
 ```(masterpiece:0.98) (best:1.06) (quality:1.14) (girl:0.81)```
 
-In ComfyUI the strengths are not averaged out like this so it will use the strengths exactly as you prompt them.
+在ComfyUI中，强度不会像这样被平均化，所以它会完全按照您提示的方式使用强度。
 
-There are also many other differences but these two are the ones that have most impact.
-
-
-## Why do I get incoherent images with some checkpoints that are less than 1.9GB?
-
-Some rare checkpoints like ProtoGen_X3.4 don't come with CLIP weights. The CLIPLoader node in ComfyUI can be used to load CLIP model weights like [these CLIP L ones that can be used on SD1.5](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors).
+还有许多其他差异，但这两个是影响最大的。
 
 
-## What is the difference between strength_model and strength_clip in the "Load LoRA" node?
+## 为什么使用小于1.9GB的某些检查点会得到不连贯的图像？
 
-These separate values control the strength that the LoRA is applied separately to the CLIP model and the main MODEL. In most UIs adjusting the LoRA strength is only one number and setting the lora strength to 0.8 for example is the same as setting both strength_model and strength_clip to 0.8.
+一些罕见的检查点如ProtoGen_X3.4不包含CLIP权重。ComfyUI中的CLIPLoader节点可用于加载CLIP模型权重，如[这些可用于SD1.5的CLIP L权重](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors)。
 
-The reason you can tune both in ComfyUI is because the CLIP and MODEL/UNET part of the LoRA will most likely have learned different concepts so tweaking them separately can give you better images.
+
+## "Load LoRA"节点中的strength_model和strength_clip有什么区别？
+
+这些独立的值控制LoRA分别应用于CLIP模型和主MODEL的强度。在大多数UI中，调整LoRA强度只是一个数字，例如将lora强度设置为0.8等同于将strength_model和strength_clip都设置为0.8。
+
+在ComfyUI中可以同时调整两者的原因是LoRA的CLIP和MODEL/UNET部分很可能学习了不同的概念，因此分别调整它们可以获得更好的图像。

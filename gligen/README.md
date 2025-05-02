@@ -1,14 +1,14 @@
-# GLIGEN Examples
+# GLIGEN示例
 
-Here is a link [to download pruned versions of the supported GLIGEN model files](https://huggingface.co/comfyanonymous/GLIGEN_pruned_safetensors/tree/main)
+这里是[支持的GLIGEN模型文件精简版下载链接](https://huggingface.co/comfyanonymous/GLIGEN_pruned_safetensors/tree/main)
 
-Put the GLIGEN model files in the ComfyUI/models/gligen directory.
+将GLIGEN模型文件放入ComfyUI/models/gligen目录。
 
-### Text box GLIGEN
+### 文本框GLIGEN
 
-The text box GLIGEN model lets you specify the location and size of multiple objects in the image. To use it properly you should write your prompt normally then use the GLIGEN Textbox Apply nodes to specify where you want certain objects/concepts in your prompts to be in the image.
+文本框GLIGEN模型允许您指定图像中多个对象的位置和大小。要正确使用它，您应该正常编写提示词，然后使用GLIGEN Textbox Apply节点来指定提示词中某些对象/概念在图像中的位置。
 
-![Example](gligen_textbox_example.png)
+![示例](gligen_textbox_example.png)
 
-Is an example how to use it. You can load this image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
+这是一个使用示例。您可以在[ComfyUI](https://github.com/comfyanonymous/ComfyUI)中加载此图像以获取工作流程。
 

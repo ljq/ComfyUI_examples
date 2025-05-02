@@ -1,26 +1,26 @@
-# 2 Pass Txt2Img (Hires fix) Examples
+# 2 Pass Txt2Img (高分辨率修复) 示例
 
-These are examples demonstrating how you can achieve the "Hires Fix" feature.
+这些示例演示了如何实现"高分辨率修复"（Hires Fix）功能。
 
-You can Load these images in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
+您可以在[ComfyUI](https://github.com/comfyanonymous/ComfyUI)中加载这些图片来获取完整的工作流程。
 
-Hires fix is just creating an image at a lower resolution, upscaling it and then sending it through img2img. Note that in ComfyUI txt2img and img2img are the same node. Txt2Img is achieved by passing an empty image to the sampler node with maximum denoise.
+高分辨率修复实际上就是先创建一个低分辨率图像，然后对其进行放大，再通过img2img处理。请注意，在ComfyUI中，txt2img和img2img是同一个节点。通过向采样器节点传递一个空白图像并设置最大去噪，即可实现Txt2Img。
 
-Here's a simple workflow in ComfyUI to do this with basic latent upscaling:
+以下是在ComfyUI中使用基本潜空间放大的简单工作流程：
 
-![Example](hiresfix_latent_workflow.png)
+![示例](hiresfix_latent_workflow.png)
 
-## Non latent Upscaling
+## 非潜空间放大
 
-Here is an example of how the [esrgan upscaler](../upscale_models) can be used for the upscaling step. Since ESRGAN operates in pixel space the image must be converted to pixel space and back to latent space after being upscaled.
+这是一个使用[esrgan放大器](../upscale_models)进行放大的示例。由于ESRGAN在像素空间中运作，图像必须先转换为像素空间，放大后再转回潜空间。
 
-![Example](hiresfix_esrgan_workflow.png)
+![示例](hiresfix_esrgan_workflow.png)
 
 
-## More Examples
+## 更多示例
 
-Here is an example of a more complex 2 pass workflow, This image is first generated with the WD1.5 beta 3 illusion model, latent upscaled and then a second pass is done with cardosAnime_v10:
+这是一个更复杂的两步工作流程示例，该图像首先使用WD1.5 beta 3 illusion模型生成，然后进行潜空间放大，最后使用cardosAnime_v10进行第二次处理：
 
-![Example](latent_upscale_different_prompt_model.png)
+![示例](latent_upscale_different_prompt_model.png)
 
 

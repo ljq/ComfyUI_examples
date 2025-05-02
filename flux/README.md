@@ -1,52 +1,50 @@
-# Flux Examples
+# Flux 示例
 
-Flux is a family of diffusion models by [black forest labs](https://blackforestlabs.ai/announcing-black-forest-labs/)
+Flux是由[black forest labs](https://blackforestlabs.ai/announcing-black-forest-labs/)开发的一系列扩散模型
 
-For the easy to use single file versions that you can easily use in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) see below: [FP8 Checkpoint Version](#simple-to-use-fp8-checkpoint-version)
+如需易于使用的单文件版本，您可以在[ComfyUI](https://github.com/comfyanonymous/ComfyUI)中轻松使用，请参见下方：[FP8检查点版本](#simple-to-use-fp8-checkpoint-version)
 
-## Regular Full Version
+## 完整版本
 
-### Files to download for the regular version
+### 常规版本需要下载的文件
 
-If you don't have t5xxl_fp16.safetensors or clip_l.safetensors already in your ComfyUI/models/text_encoders/ directory you can find them on: [this link.](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main) You can use t5xxl_fp8_e4m3fn.safetensors instead for lower memory usage but the fp16 one is recommended if you have more than 32GB ram.
+如果您的ComfyUI/models/text_encoders/目录中还没有t5xxl_fp16.safetensors或clip_l.safetensors，可以在[此链接](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main)找到。您可以使用t5xxl_fp8_e4m3fn.safetensors来降低内存使用，但如果您的内存超过32GB，推荐使用fp16版本。
 
-The VAE can be found [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.safetensors) and should go in your ComfyUI/models/vae/ folder.
+VAE可以在[这里](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.safetensors)找到，应放入您的ComfyUI/models/vae/文件夹。
 
-### Tips if you are running out of memory:
+### 内存不足时的提示：
 
-Use the single file fp8 version that you can find by looking [Below](#simple-to-use-fp8-checkpoint-version)
+使用可以在[下方](#simple-to-use-fp8-checkpoint-version)找到的单文件fp8版本。
 
-You can set the weight_dtype in the "Load Diffusion Model" node to fp8 which will lower the memory usage by half but might reduce quality a tiny bit. You can also download the example.
+您可以在"Load Diffusion Model"节点中将weight_dtype设置为fp8，这将使内存使用量减半，但可能会略微降低质量。您也可以下载示例。
 
-### Flux Dev
+### Flux开发版本
 
-You can find the Flux Dev diffusion model weights [here](https://huggingface.co/black-forest-labs/FLUX.1-dev). Put the flux1-dev.safetensors file in your: ComfyUI/models/diffusion_models/ folder.
+您可以在[这里](https://huggingface.co/black-forest-labs/FLUX.1-dev)找到Flux Dev扩散模型权重。将flux1-dev.safetensors文件放入您的ComfyUI/models/diffusion_models/文件夹。
 
-You can then load or drag the following image in ComfyUI to get the workflow:
+然后您可以在ComfyUI中加载或拖放以下图片获取工作流程：
 
-![Example](flux_dev_example.png)
+![示例](flux_dev_example.png)
 
 ### Flux Schnell
 
-Flux Schnell is a distilled 4 step model.
+Flux Schnell是一个蒸馏的4步模型。
 
-You can find the Flux Schnell diffusion model weights [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/flux1-schnell.safetensors) this file should go in your: ComfyUI/models/unet/ folder.
+您可以在[这里](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/flux1-schnell.safetensors)找到Flux Schnell扩散模型权重，此文件应放入您的ComfyUI/models/unet/文件夹。
 
+然后您可以在ComfyUI中加载或拖放以下图片获取工作流程：
 
-You can then load or drag the following image in ComfyUI to get the workflow:
+![示例](flux_schnell_example.png)
 
-![Example](flux_schnell_example.png)
+## 简单易用的FP8检查点版本
 
+### Flux开发版本
 
-## Simple to use FP8 Checkpoint version
+您可以在[这里](https://huggingface.co/Comfy-Org/flux1-dev/blob/main/flux1-dev-fp8.safetensors)找到Flux dev的易用检查点，可以放入您的ComfyUI/models/checkpoints/目录。
 
-### Flux Dev
+此文件可以使用常规的"Load Checkpoint"节点加载。使用时请确保将CFG设置为1.0。
 
-You can find an easy to use checkpoint for the Flux dev [here](https://huggingface.co/Comfy-Org/flux1-dev/blob/main/flux1-dev-fp8.safetensors) that you can put in your: ComfyUI/models/checkpoints/ directory.
-
-This file can be loaded with the regular "Load Checkpoint" node. Make sure you set CFG to 1.0 when using it.
-
-Note that fp8 degrades the quality a bit so if you have the resources the official full 16 bit version is recommended.
+请注意fp8会略微降低质量，因此如果您有资源，推荐使用官方的完整16位版本。
 
 You can then load or drag the following image in ComfyUI to get the workflow:
 

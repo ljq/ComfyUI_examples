@@ -1,14 +1,14 @@
-# Inpaint Examples
+# 图像修复示例
 
 ![Example](inpaint_example.png)
 
-In this example we will be using this image. Download it and place it in your input folder.
+在这个示例中我们将使用这张图片。请下载它并放入您的输入文件夹。
 
 ![Example](yosemite_inpaint_example.png)
 
-This image has had part of it erased to alpha with gimp, the alpha channel is what we will be using as a mask for the inpainting. If using GIMP make sure you save the values of the transparent pixels for best results.
+这张图片的部分区域已用GIMP擦除为alpha通道，我们将使用alpha通道作为图像修复的遮罩。如果使用GIMP，请确保保存透明像素的值以获得最佳效果。
 
-ComfyUI also has a mask editor that can be accessed by right clicking an image in the LoadImage node and "Open in MaskEditor".
+ComfyUI还提供了一个遮罩编辑器，可以通过在LoadImage节点中右键点击图片并选择"Open in MaskEditor"来访问。
 
 
 The following images can be loaded in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.

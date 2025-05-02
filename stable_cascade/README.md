@@ -1,47 +1,44 @@
-# Stable Cascade Examples
+# Stable Cascade 示例
 
-First download the [stable_cascade_stage_c.safetensors and stable_cascade_stage_b.safetensors checkpoints](https://huggingface.co/stabilityai/stable-cascade/tree/main/comfyui_checkpoints) and put them in the ComfyUI/models/checkpoints folder.
+首先下载 [stable_cascade_stage_c.safetensors 和 stable_cascade_stage_b.safetensors 检查点](https://huggingface.co/stabilityai/stable-cascade/tree/main/comfyui_checkpoints) 并放入 ComfyUI/models/checkpoints 文件夹。
 
-Stable cascade is a 3 stage process, first a low resolution latent image is generated with the Stage C diffusion model. This latent is then upscaled using the Stage B diffusion model. This upscaled latent is then upscaled again and converted to pixel space by the Stage A VAE.
+Stable cascade 是一个3阶段过程：首先由Stage C扩散模型生成低分辨率潜在图像，然后由Stage B扩散模型放大该潜在图像，最后由Stage A VAE再次放大并转换为像素空间。
 
-Note that you can download all images in this page and then drag or load them on ComfyUI to get the workflow embedded in the image.
+注意：您可以下载本页所有图片，然后在ComfyUI中拖放或加载它们以获取嵌入的工作流程。
 
-## Text to Image
+## 文本转图像
 
-Here is a basic text to image workflow:
+这是一个基本的文本转图像工作流程：
 
-![Example](stable_cascade__text_to_image.png)
+![示例](stable_cascade__text_to_image.png)
 
+## 图像转图像
 
-## Image to Image
+这是一个通过编码图像并将其传递给Stage C来实现基本图像转图像的示例：
 
-Here's an example of how to do basic image to image by encoding the image and passing it to Stage C.
+![示例](stable_cascade__image_to_image.png)
 
-![Example](stable_cascade__image_to_image.png)
+## 图像变体
 
-## Image Variations
+Stable Cascade支持使用CLIP vision的输出创建图像变体。参见以下工作流程示例：
 
-Stable Cascade supports creating variations of images using the output of CLIP vision. See the following workflow for an example:
+![示例](stable_cascade__image_remixing.png)
 
-![Example](stable_cascade__image_remixing.png)
+参见下一个工作流程了解如何混合多个图像：
 
-See this next workflow for how to mix multiple images together:
+![示例](stable_cascade__image_remixing_multiple.png)
 
-![Example](stable_cascade__image_remixing_multiple.png)
-
-You can find the input image for the above workflows on the [unCLIP example page](../unclip)
-
+您可以在[unCLIP示例页面](../unclip)找到上述工作流程的输入图像。
 
 ## ControlNet
 
-You can download the stable cascade controlnets from: [here](https://huggingface.co/stabilityai/stable-cascade/tree/main/controlnet). For these examples I have renamed the files by adding stable_cascade_ in front of the filename for example: [stable_cascade_canny.safetensors](https://huggingface.co/stabilityai/stable-cascade/blob/main/controlnet/canny.safetensors), [stable_cascade_inpainting.safetensors](https://huggingface.co/stabilityai/stable-cascade/blob/main/controlnet/inpainting.safetensors)
+您可以从[这里](https://huggingface.co/stabilityai/stable-cascade/tree/main/controlnet)下载stable cascade controlnets。在这些示例中，我在文件名前添加了stable_cascade_前缀，例如：[stable_cascade_canny.safetensors](https://huggingface.co/stabilityai/stable-cascade/blob/main/controlnet/canny.safetensors), [stable_cascade_inpainting.safetensors](https://huggingface.co/stabilityai/stable-cascade/blob/main/controlnet/inpainting.safetensors)
 
-Here is an example for how to use the Canny Controlnet:
+以下是使用Canny Controlnet的示例：
 
-![Example](stable_cascade__canny_controlnet.png)
+![示例](stable_cascade__canny_controlnet.png)
 
+以下是使用Inpaint Controlnet的示例，示例输入图像可以在[这里](../inpaint/yosemite_inpaint_example.png)找到。提醒您可以在LoadImage节点中右键单击图像并使用遮罩编辑器进行编辑。
 
-Here is an example for how to use the Inpaint Controlnet, the example input image can be found [here](../inpaint/yosemite_inpaint_example.png). A reminder that you can right click images in the LoadImage node and edit them with the mask editor.
-
-![Example](stable_cascade__inpaint_controlnet.png)
+![示例](stable_cascade__inpaint_controlnet.png)
 

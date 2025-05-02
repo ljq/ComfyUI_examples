@@ -6,16 +6,16 @@ html, body {
 }
 </style>
 <head>
-<title>Drag .latent files to preview them</title>
+<title>拖放.latent文件进行预览</title>
 </head>
 <body>
 
-<h3>Drag a .latent file on this page or select it with the input below to preview it.</h3>
+<h3>将.latent文件拖放到此页面或使用下方输入框选择文件进行预览。</h3>
 <br>
 <input type="file" accept=".latent" onchange="previewLatent(this.files[0]);"></input>
 <br>
 <div id="display_image"></div>
-This page decodes the file entirely in the browser in only a few lines of javascript and calculates a low quality preview from the latent image data using a simple matrix multiplication.
+本页面完全在浏览器中使用少量JavaScript代码解码文件，并通过简单的矩阵乘法从潜在图像数据计算低质量预览。
 <br>
 
 <script>
