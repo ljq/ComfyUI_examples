@@ -74,40 +74,40 @@
 
 [Hunyuan3D 2.0](https://docs.comfy.org/tutorials/3d/hunyuan3D-2)
 
-## Documentation
+## 文档资料
 
-#### [WIP Documentation](https://docs.comfy.org/)
+#### [WIP 文档](https://docs.comfy.org/)
 
-#### [WIP LLM Assisted Documentation](https://docs.getsalt.ai/md/) of every node
+#### [WIP LLM辅助文档](https://docs.getsalt.ai/md/) 包含每个节点的说明
 
-The old [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what most nodes do.
+旧的[节点指南(WIP)](https://blenderneko.github.io/ComfyUI-docs/)记录了大多数节点的功能。
 
-You might also want to check out the: [Frequently Asked Questions](faq)
+您可能还想查看：[常见问题解答](faq)
 
-The [ComfyUI Blog](https://comfyanonymous.github.io/ComfyUI_Blog/) is also a source of various information.
+[ComfyUI博客](https://comfyanonymous.github.io/ComfyUI_Blog/)也是各种信息的来源。
 
-## Other Sources of Examples/Information:
+## 其他示例/信息来源
 
-#### Workflows and other General Information:
+#### 工作流和其他通用信息：
 
 [https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
 
-Third party websites for uploading and sharing workflows:
+第三方工作流分享网站：
 - [OpenArt AI](https://openart.ai/workflows/)
 - [https://comfyworkflows.com/](https://comfyworkflows.com/)
 
 [https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
 
-#### Custom Nodes/extensions:
+#### 自定义节点/扩展：
 
-ComfyUI is extensible and many people have written some great custom nodes for it.
+ComfyUI具有可扩展性，许多开发者为其编写了优秀的功能扩展。
 
-Note that I am not responsible if one of these breaks your workflows, your ComfyUI install or anything else.
+请注意：如果这些扩展导致您的工作流中断、ComfyUI安装损坏或其他问题，我们不承担任何责任。
 
-Here are some places where you can find some:
+以下是一些可以找到扩展的地方：
 
-#### [ComfyUI Custom Node Manager](https://github.com/ltdrdata/ComfyUI-Manager)
+#### [ComfyUI自定义节点管理器](https://github.com/ltdrdata/ComfyUI-Manager)
 
 [https://github.com/WASasquatch/comfyui-plugins](https://github.com/WASasquatch/comfyui-plugins)
 
-[This blog post if you scroll down a bit](https://comfyanonymous.github.io/ComfyUI_Blog/comfyui/update/2023/05/18/ComfyUi-is-4-months-old.html)
+[这篇博客文章（向下滚动查看）](https://comfyanonymous.github.io/ComfyUI_Blog/comfyui/update/2023/05/18/ComfyUi-is-4-months-old.html)
